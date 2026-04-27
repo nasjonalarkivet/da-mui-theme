@@ -1,4 +1,5 @@
 import { Box, Container, Tab, Tabs, Typography } from "@mui/material"
+import { useColorScheme } from "@mui/material/styles"
 import { Colors } from "./Colors"
 import { ButtonExample } from "./ButtonExample"
 import { SwitchExample } from "./SwitchExample"
@@ -22,6 +23,7 @@ import { TypographyExample } from "./TypographyExample"
 import { ChipExample } from "./ChipExample"
 import { DialogExample } from "./DialogExample"
 import { CheckOutlined as CheckIcon } from "@mui/icons-material"
+import { ThemeRadioExample } from "./ThemeRadioExample"
 
 const gallery = [
 	{ label: "Colors", component: Colors },
@@ -54,13 +56,22 @@ const gallery = [
 
 export const Gallery = () => {
 	const [value, setValue] = useState(0)
+	const { mode, setMode } = useColorScheme()
 
 	const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
 		setValue(newValue)
 	}
+
+	if (!mode) {
+		return null
+	}
+
 	return (
 		<Container maxWidth="xl">
-			<Typography variant="h1">Digitalarkivet MUI theme</Typography>
+			<Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2 }}>
+				<Typography variant="h1">Digitalarkivet MUI theme</Typography>
+				<ThemeRadioExample mode={mode} setMode={setMode} />
+			</Box>
 			<Box sx={{ my: 2 }}>
 				<Tabs
 					onChange={handleChange}

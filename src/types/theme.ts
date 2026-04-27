@@ -53,7 +53,7 @@ declare module "@mui/material/styles" {
 		background: string
 	}
 
-	interface PaletteColor extends SimplePaletteColorOptions {}
+	interface PaletteColor extends SimplePaletteColorOptions { }
 
 	interface Palette {
 		news: PaletteColor
@@ -82,9 +82,30 @@ declare module "@mui/material/styles" {
 		gray: string
 		floating: string
 		darkGreen: string
+		backdrop: string
+		input: string
 	}
 
 	interface TypographyVariants {
+		fontWeightRoman: CSSProperties["fontWeight"]
+		lineHeight100: CSSProperties["lineHeight"]
+		lineHeight110: CSSProperties["lineHeight"]
+		lineHeight120: CSSProperties["lineHeight"]
+		lineHeight125: CSSProperties["lineHeight"]
+		lineHeight130: CSSProperties["lineHeight"]
+		lineHeight140: CSSProperties["lineHeight"]
+		lineHeight150: CSSProperties["lineHeight"]
+		fontSize12: CSSProperties["fontSize"]
+		fontSize14: CSSProperties["fontSize"]
+		fontSize16: CSSProperties["fontSize"]
+		fontSize20: CSSProperties["fontSize"]
+		fontSize24: CSSProperties["fontSize"]
+		fontSize32: CSSProperties["fontSize"]
+		fontSize40: CSSProperties["fontSize"]
+		fontSize48: CSSProperties["fontSize"]
+		fontSize56: CSSProperties["fontSize"]
+		fontSize72: CSSProperties["fontSize"]
+		fontSize96: CSSProperties["fontSize"]
 		body: CSSProperties
 		bodyBold: CSSProperties
 		bodyLarge: CSSProperties
@@ -108,6 +129,25 @@ declare module "@mui/material/styles" {
 	}
 
 	interface TypographyVariantsOptions {
+		fontWeightRoman?: CSSProperties["fontWeight"]
+		lineHeight100?: CSSProperties["lineHeight"]
+		lineHeight110?: CSSProperties["lineHeight"]
+		lineHeight120?: CSSProperties["lineHeight"]
+		lineHeight125?: CSSProperties["lineHeight"]
+		lineHeight130?: CSSProperties["lineHeight"]
+		lineHeight140?: CSSProperties["lineHeight"]
+		lineHeight150?: CSSProperties["lineHeight"]
+		fontSize12?: CSSProperties["fontSize"]
+		fontSize14?: CSSProperties["fontSize"]
+		fontSize16?: CSSProperties["fontSize"]
+		fontSize20?: CSSProperties["fontSize"]
+		fontSize24?: CSSProperties["fontSize"]
+		fontSize32?: CSSProperties["fontSize"]
+		fontSize40?: CSSProperties["fontSize"]
+		fontSize48?: CSSProperties["fontSize"]
+		fontSize56?: CSSProperties["fontSize"]
+		fontSize72?: CSSProperties["fontSize"]
+		fontSize96?: CSSProperties["fontSize"]
 		body?: CSSProperties
 		bodyBold?: CSSProperties
 		bodyLarge?: CSSProperties

@@ -2,9 +2,8 @@ import { CheckOutlined, KeyboardArrowDownOutlined } from "@mui/icons-material"
 import { Box, buttonBaseClasses, MenuItem } from "@mui/material"
 import Button from "@mui/material/Button"
 import Menu, { MenuProps } from "@mui/material/Menu"
-import { styled } from "@mui/material/styles"
-import * as React from "react"
-import theme from "@digitalarkivet/mui-theme/light"
+import { Box, buttonBaseClasses, MenuItem } from "@mui/material"
+import { KeyboardArrowDownOutlined, CheckOutlined } from "@mui/icons-material"
 
 const StyledButton = styled(Button)(({ theme }) => ({
 	borderRadius: theme.customShape.borderRadiusFull,
@@ -151,9 +150,7 @@ export default function ActionChip({
 							})}
 						>
 							<Box>{label}</Box>
-							{isSelected && (
-								<CheckOutlined style={{ color: theme.palette.text.primaryInvert }} fontSize="small" />
-							)}
+							{isSelected && <CheckOutlined sx={(theme) => ({ color: (theme.palette.text as any).primaryInvert })} fontSize="small" />}
 						</MenuItem>
 					)
 				})}
