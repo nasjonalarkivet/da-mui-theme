@@ -1,6 +1,4 @@
-import { alpha, createTheme } from "@mui/material/styles"
-import { nbNO as coreNbNo } from "@mui/material/locale"
-import type {} from "@mui/x-date-pickers/themeAugmentation"
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
 import {
 	alertClasses,
 	alertTitleClasses,
@@ -18,15 +16,17 @@ import {
 	tabClasses,
 	tabsClasses,
 } from "@mui/material"
-import ExpandIcon from "./icons/ExpandIcon"
+import { nbNO as coreNbNo } from "@mui/material/locale"
+import { alpha, createTheme } from "@mui/material/styles"
+import type {} from "@mui/x-date-pickers/themeAugmentation"
+import { Dayjs } from "dayjs"
+import CalendarMonthIcon from "./icons/CalendarMonthIcon"
+import CheckBoxBlank from "./icons/CheckBoxBlank"
 import CheckBoxChecked from "./icons/CheckBoxChecked"
 import CheckBoxIndeterminate from "./icons/CheckBoxIndeterminate"
-import CalendarMonthIcon from "./icons/CalendarMonthIcon"
-import { Dayjs } from "dayjs"
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
+import ExpandIcon from "./icons/ExpandIcon"
 import RadioCheckedIcon from "./icons/RadioChecked"
 import RadioUncheckedIcon from "./icons/RadioUnchecked"
-import CheckBoxBlank from "./icons/CheckBoxBlank"
 
 /**
  * Digitalarkivet base typography
@@ -540,6 +540,16 @@ const theme = createTheme(
 							},
 						},
 					},
+					{
+						props: { color: "secondary", variant: "outlined" },
+						style: {
+							"&:hover": {
+								color: themeColors.palette.text.primaryInvert,
+								backgroundColor: themeColors.palette.primary.main,
+								borderColor: themeColors.palette.primary.main,
+							},
+						},
+					},
 				],
 				styleOverrides: {
 					root: ({ theme }) => ({
@@ -587,13 +597,6 @@ const theme = createTheme(
 							},
 						},
 					}),
-					outlinedSecondary: {
-						"&:hover": {
-							color: themeColors.palette.text.primaryInvert,
-							backgroundColor: themeColors.palette.primary.main,
-							borderColor: themeColors.palette.primary.main,
-						},
-					},
 				},
 			},
 			MuiFab: {
@@ -910,7 +913,7 @@ const theme = createTheme(
 				styleOverrides: {
 					root: ({ ownerState, theme }) => {
 						return {
-							[`& .${tabsClasses.flexContainer}`]: {
+							[`& .${tabsClasses.list}`]: {
 								gap: theme.spacing(1.5),
 							},
 							[`& .${tabsClasses.indicator}`]: {
@@ -1160,18 +1163,16 @@ const theme = createTheme(
 							clearable: true,
 						},
 						textField: {
-							InputProps: {
-								sx: theme => ({
-									"& .MuiInputBase-input": {
-										textTransform: "lowercase",
-										display: "flex",
-										alignItems: "center",
-									},
-									"& .MuiInputAdornment-root:has(.clearButton)": {
-										position: "absolute",
-										right: theme.spacing(6),
-									},
-								}),
+							sx: {
+								"& .MuiInputBase-input": {
+									textTransform: "lowercase",
+									display: "flex",
+									alignItems: "center",
+								},
+								"& .MuiInputAdornment-root:has(.clearButton)": {
+									position: "absolute",
+									right: 48,
+								},
 							},
 						},
 						popper: {

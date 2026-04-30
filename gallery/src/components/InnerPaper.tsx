@@ -1,6 +1,8 @@
 import { Paper, styled } from "@mui/material"
+import type { PaperProps } from "@mui/material/Paper"
+import type { ComponentType } from "react"
 
-export const InnerPaper = styled(Paper)({
+export const InnerPaper: ComponentType<PaperProps> = styled(Paper)({
 	maxWidth: "600px",
 	padding: "1rem",
 	boxShadow:

@@ -1,18 +1,22 @@
 {
-    "extends": "./tsconfig.dist.json",
-    "compilerOptions": {
-        "jsx": "react-jsx",
-        "rootDir": "",
-        "baseUrl": "./gallery/src/",
-        "paths": {
-            "@digitalarkivet/mui-theme/*": ["../../src/*"]
-        },
-        "outDir": "./gallery/build"
+  "extends": "./tsconfig.dist.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "rootDir": "",
+    "paths": {
+      "@digitalarkivet/mui-theme/*": [
+        "./src/*"
+      ],
+      "@gallery/*": [
+        "./gallery/src/*"
+      ],
     },
-    "exclude": [
-        "node_modules",
-        "dist",
-        "test",
-        "gallery/build"
-      ]
+    "outDir": "./gallery/build"
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test",
+    "gallery/build"
+  ]
 }

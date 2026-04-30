@@ -1,6 +1,6 @@
+import { CardGiftcardOutlined as GiftIcon, SettingsOutlined as SettingsIcon } from "@mui/icons-material"
 import { Accordion, AccordionDetails, AccordionSummary, Box, Typography } from "@mui/material"
 import { ExampleWrapper } from "./ExampleWrapper"
-import { SettingsOutlined as SettingsIcon, CardGiftcardOutlined as GiftIcon } from "@mui/icons-material"
 
 import { DaBadge } from "@digitalarkivet/mui-theme/components/DaBadge"
 
@@ -29,7 +29,7 @@ export const AccordionExample = () => {
 
 	return (
 		<ExampleWrapper title="Eksempel på Accordion">
-			<Box width={800}>
+			<Box sx={{ width: 800 }}>
 				{accordionData.map(({ summary, details }, index) => (
 					<Accordion key={index}>
 						<AccordionSummary>

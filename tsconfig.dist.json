@@ -1,24 +1,27 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2020",
     "module": "commonjs",
     "lib": [
-      "es2017",
-      "es7",
-      "es6",
+      "es2020",
       "dom"
     ],
     "declaration": true,
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
-    "rootDir": "./src/",
     "jsx": "react-jsx",
     "sourceMap": true,
     "declarationMap": true,
+    "rootDir": "",
     "paths": {
-        "@digitalarkivet/mui-theme/*": ["./src/*"]
-    },
+      "@digitalarkivet/mui-theme/*": [
+        "./src/*"
+      ],
+      "@gallery/*": [
+        "./gallery/src/*"
+      ],
+    }
   },
   "exclude": [
     "node_modules",

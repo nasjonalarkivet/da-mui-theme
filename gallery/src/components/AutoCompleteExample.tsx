@@ -2,9 +2,14 @@ import { Autocomplete, Checkbox, Chip, FormControl, FormControlLabel, Radio, Rad
 import React from "react"
 import { ExampleWrapper } from "./ExampleWrapper"
 
+type Film = {
+	title: string
+	year: number
+}
+
 export const AutoCompleteExample = () => {
-	const fixedOptions: any = []
-	const [value, setValue] = React.useState([...fixedOptions])
+	const fixedOptions: Film[] = []
+	const [value, setValue] = React.useState<Film[]>([...fixedOptions])
 	const [color, setColor] = React.useState<"default" | "error" | "warning">("default")
 	const [disabled, setDisabled] = React.useState(false)
 
@@ -15,7 +20,7 @@ export const AutoCompleteExample = () => {
 	return (
 		<ExampleWrapper title="Eksempel på Autocompletes">
 			<FormControl fullWidth>
-				<Autocomplete
+				<Autocomplete<Film, true, false, false>
 					multiple
 					id="fixed-tags-demo"
 					value={value}
@@ -25,14 +30,14 @@ export const AutoCompleteExample = () => {
 					options={top100Films}
 					getOptionLabel={option => option.title}
 					disableCloseOnSelect
-					renderTags={(tagValue, getTagProps) =>
+					renderValue={(tagValue, getItemProps) =>
 						tagValue.map((option, index) => {
-							const props = getTagProps({ index })
+							const props = getItemProps({ index })
 							const { key, ...otherProps } = props
 							return <Chip key={key} {...otherProps} color={color} label={option.title} disabled={disabled} />
 						})
 					}
-					style={{ width: 500 }}
+					sx={{ width: 500 }}
 					renderInput={params => <TextField {...params} label="Favorittfilmer" placeholder="Favoritter" />}
 				/>
 			</FormControl>
@@ -65,7 +70,7 @@ export const AutoCompleteExample = () => {
 	)
 }
 
-const top100Films = [
+const top100Films: Film[] = [
 	{ title: "The Shawshank Redemption", year: 1994 },
 	{ title: "The Godfather", year: 1972 },
 	{ title: "The Godfather: Part II", year: 1974 },

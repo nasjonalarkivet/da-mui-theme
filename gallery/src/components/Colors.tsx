@@ -78,7 +78,7 @@ const GenericPaletteDisplay = ({ title, path, colors }: { title: string; path: s
 						path={path}
 						name={color}
 						big={index === 0}
-						gridArea={String.fromCharCode(97 + index)} // "a", "b", "c", etc.
+						sx={{ gridArea: String.fromCharCode(97 + index) }} // "a", "b", "c", etc.
 					/>
 				))}
 			</Box>
