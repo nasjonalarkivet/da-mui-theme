@@ -1,10 +1,10 @@
-import * as React from "react"
-import { styled } from "@mui/material/styles"
+import { CheckOutlined, KeyboardArrowDownOutlined } from "@mui/icons-material"
+import { Box, buttonBaseClasses, MenuItem } from "@mui/material"
 import Button from "@mui/material/Button"
 import Menu, { MenuProps } from "@mui/material/Menu"
-import { Box, buttonBaseClasses, MenuItem } from "@mui/material"
-import { KeyboardArrowDownOutlined, CheckOutlined } from "@mui/icons-material"
-import theme from "../light"
+import { styled } from "@mui/material/styles"
+import * as React from "react"
+import theme from "@digitalarkivet/mui-theme/light"
 
 const StyledButton = styled(Button)(({ theme }) => ({
 	borderRadius: theme.customShape.borderRadiusFull,
@@ -80,13 +80,7 @@ export default function ActionChip({
 
 	if (variant === "button") {
 		return (
-			<StyledButton
-				variant="outlined"
-				disableElevation
-				onClick={onClick}
-				startIcon={startIcon}
-				disabled={disabled}
-			>
+			<StyledButton variant="outlined" disableElevation onClick={onClick} startIcon={startIcon} disabled={disabled}>
 				<Box component="span" className="MuiChip-label MuiChip-labelMedium">
 					<Box>{label}</Box>
 				</Box>
@@ -129,7 +123,11 @@ export default function ActionChip({
 			</StyledButton>
 			<StyledMenu
 				id="action-chip-menu"
-				MenuListProps={{ "aria-labelledby": "action-chip-button" }}
+				slotProps={{
+					list: {
+						"aria-labelledby": "action-chip-button",
+					},
+				}}
 				anchorEl={anchorEl}
 				open={open}
 				onClose={handleClose}
@@ -153,7 +151,9 @@ export default function ActionChip({
 							})}
 						>
 							<Box>{label}</Box>
-							{isSelected && <CheckOutlined style={{ color: theme.palette.text.primaryInvert }} fontSize="small" />}
+							{isSelected && (
+								<CheckOutlined style={{ color: theme.palette.text.primaryInvert }} fontSize="small" />
+							)}
 						</MenuItem>
 					)
 				})}

@@ -1,6 +1,6 @@
-import { Fab,  Grid, Stack, Tooltip, Typography } from "@mui/material"
-import { ExampleWrapper } from "./ExampleWrapper"
 import { TuneOutlined } from "@mui/icons-material"
+import { Fab, Grid, Stack, Tooltip, Typography } from "@mui/material"
+import { ExampleWrapper } from "./ExampleWrapper"
 
 type FabSectionProps = {
 	title: string
@@ -11,7 +11,7 @@ const FabSection = ({ title, color }: FabSectionProps) => (
 	<Grid size={{ xs: 12, md: 6 }} sx={{ p: 2 }}>
 		<Typography variant="section">{title}</Typography>
 
-		<Stack spacing={2} direction="row" alignItems="center">
+		<Stack spacing={2} direction="row" sx={{ alignItems: "center" }}>
 			<Fab variant="extended" color={color}>
 				<TuneOutlined />
 				Extended

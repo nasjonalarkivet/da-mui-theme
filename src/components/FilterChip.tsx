@@ -1,8 +1,8 @@
-import React, { useState } from "react"
+import { filterChipStyles } from "@digitalarkivet/mui-theme/light"
+import { CheckOutlined } from "@mui/icons-material"
 import { Box, Chip, ChipProps } from "@mui/material"
 import { styled } from "@mui/material/styles"
-import { CheckOutlined } from "@mui/icons-material"
-import { filterChipStyles } from "../light"
+import React, { useState } from "react"
 
 const StyledChip = styled(Chip)<ChipProps>(({ theme, selected }) => ({
 	...filterChipStyles,
