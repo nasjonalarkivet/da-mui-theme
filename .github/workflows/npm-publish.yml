@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
         with:
           package_json_file: package.json
 
@@ -28,4 +28,4 @@ jobs:
 
       - run: pnpm run ci
       - run: pnpm run build
-      - run: npm publish --no-git-checks --provenance --access public
+      - run: pnpm publish --no-git-checks --access public
