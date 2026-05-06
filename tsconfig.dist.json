@@ -13,7 +13,7 @@
     "jsx": "react-jsx",
     "sourceMap": true,
     "declarationMap": true,
-    "rootDir": "",
+    "rootDir": "src",
     "paths": {
       "@digitalarkivet/mui-theme/*": [
         "./src/*"
