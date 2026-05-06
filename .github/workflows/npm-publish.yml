@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   publish-npm:
-    runs-on: static-runner
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
 
@@ -28,4 +28,3 @@ jobs:
       - run: pnpm run ci
       - run: pnpm run build
       - run: pnpm publish --no-git-checks --provenance --access public
-

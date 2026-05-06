@@ -2,14 +2,14 @@
 name: Dependabot patch auto-approve and merge
 on:
   pull_request_target:
-    branches: [master, 2.x]
+    branches: [ master, 2.x ]
 
 permissions:
   pull-requests: write
 
 jobs:
   dependabot:
-    runs-on: static-runner
+    runs-on: ubuntu-latest
     if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
       - name: Dependabot metadata
