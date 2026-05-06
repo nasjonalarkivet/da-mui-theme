@@ -3,7 +3,7 @@
   "version": "4.0.0",
   "description": "MUI themes for Digitalarkivet applications",
   "private": false,
-  "author": "Arkivvverket",
+  "author": "Nasjonalarkivet",
   "exports": {
     ".": "./dist/main.js",
     "./components/*": "./dist/components/*.js"
@@ -16,10 +16,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arkivverket/da-mui-theme.git"
+    "url": "git+https://github.com/nasjonalarkivet/da-mui-theme.git"
   },
   "bugs": {
-    "url": "https://github.com/arkivverket/da-mui-theme/issues"
+    "url": "https://github.com/nasjonalarkivet/da-mui-theme/issues"
   },
   "scripts": {
     "build": "tsc -p tsconfig.dist.json",
