@@ -1,5 +1,6 @@
 version: 2
 updates:
+
   - package-ecosystem: github-actions
     directory: /
     schedule:
@@ -7,6 +8,11 @@ updates:
     cooldown:
       default-days: 7
     target-branch: "master"
+    allow:
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-major
+
   - package-ecosystem: npm
     directory: /
     schedule:
