@@ -4,16 +4,6 @@ updates:
     directory: /
     schedule:
       interval: weekly
-    target-branch: "2.x"
-  - package-ecosystem: npm
-    directory: /
-    schedule:
-      interval: weekly
-    target-branch: "2.x"
-  - package-ecosystem: github-actions
-    directory: /
-    schedule:
-      interval: weekly
     target-branch: "master"
   - package-ecosystem: npm
     directory: /
