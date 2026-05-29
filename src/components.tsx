@@ -242,13 +242,6 @@ export const createComponents = ({ customShadows }: ComponentsConfig): Component
 						},
 					},
 				}),
-				outlinedSecondary: {
-					"&:hover": {
-						color: 'var(--mui-palette-text-primaryInvert)',
-						backgroundColor: 'var(--mui-palette-primary-main)',
-						borderColor: 'var(--mui-palette-primary-main)',
-					},
-				},
 			},
 		},
 		MuiFab: {
@@ -565,7 +558,7 @@ export const createComponents = ({ customShadows }: ComponentsConfig): Component
 			styleOverrides: {
 				root: ({ ownerState, theme: themeArg }) => {
 					return {
-						[`& .${tabsClasses.flexContainer}`]: {
+						[`& .${tabsClasses.list}`]: {
 							gap: themeArg.spacing(1.5),
 						},
 						[`& .${tabsClasses.indicator}`]: {
@@ -576,7 +569,7 @@ export const createComponents = ({ customShadows }: ComponentsConfig): Component
 							borderRadius: 4,
 							minHeight: "unset",
 							[`&:hover`]: {
-								borderColor: 'var(--mui-palette-common-black)',
+								borderColor: 'var(--mui-palette-text-primary)',
 							},
 						},
 						[`&.${tabsClasses.root}`]: {
@@ -598,11 +591,11 @@ export const createComponents = ({ customShadows }: ComponentsConfig): Component
 								color: 'var(--mui-palette-text-primary)',
 								borderBottom: `1px solid transparent`,
 								"&:hover": {
-									borderBottom: `1px solid var(--mui-palette-common-black)`,
+									borderBottom: `1px solid var(--mui-palette-text-primary)`,
 								},
 							},
 							[`& .${tabsClasses.indicator}`]: {
-								backgroundColor: 'var(--mui-palette-common-black)',
+								backgroundColor: 'var(--mui-palette-text-primary)',
 							},
 						}),
 					}
@@ -710,10 +703,11 @@ export const createComponents = ({ customShadows }: ComponentsConfig): Component
 			styleOverrides: {
 				rail: {
 					opacity: 1,
-					backgroundColor: 'var(--mui-palette-background-default)',
+					backgroundColor: 'var(--mui-palette-borders-line)',
 				},
 				valueLabel: {
 					backgroundColor: 'var(--mui-palette-background-floating)',
+					color: 'var(--mui-palette-text-primaryInvert)',
 					[`&::before`]: {
 						/* prefer to avoid this */
 						backgroundColor: "transparent",
@@ -815,19 +809,17 @@ export const createComponents = ({ customShadows }: ComponentsConfig): Component
 						clearable: true,
 					},
 					textField: {
-						InputProps: {
-							sx: themeArg => ({
-								"& .MuiInputBase-input": {
-									textTransform: "lowercase",
-									display: "flex",
-									alignItems: "center",
-								},
-								"& .MuiInputAdornment-root:has(.clearButton)": {
-									position: "absolute",
-									right: themeArg.spacing(6),
-								},
-							}),
-						},
+						sx: themeArg => ({
+							"& .MuiInputBase-input": {
+								textTransform: "lowercase",
+								display: "flex",
+								alignItems: "center",
+							},
+							"& .MuiInputAdornment-root:has(.clearButton)": {
+								position: "absolute",
+								right: themeArg.spacing(6),
+							},
+						}),
 					},
 					popper: {
 						sx: themeArg => ({

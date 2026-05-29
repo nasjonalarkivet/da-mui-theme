@@ -5,28 +5,28 @@ import { themeTypographyExtended, brands, darkBrands, themeBorderRadius, themeSh
 
 const warnings = {
 	error: {
-		content: "#631901",
+		content: "#FFDCD7",
 		accent: "#EB3B00",
-		background: "#FFDCD7",
+		background: "#631901",
 	},
 	warning: {
-		content: "#4D3814",
+		content: "#FFEED1",
 		accent: "#E25F00",
-		background: "#FFEED1",
+		background: "#4D3814",
 	},
 	info: {
-		content: "#133565",
+		content: brands.brandBlue.variant1,
 		accent: "#2A6AC5",
-		background: brands.brandBlue.variant1,
+		background: "#133565",
 	},
 	news: {
-		content: "#230064",
+		content: "#E6D9FF",
 		accent: "#7540D6",
-		background: "#E6D9FF",
+		background: "#230064",
 	},
 	neutral: {
-		content: brands.brandBlack.variant1,
-		background: brands.brandGrey.variant1,
+		content: brands.brandGrey.variant1,
+		background: brands.brandBlack.variant1,
 	},
 }
 
@@ -40,7 +40,7 @@ const themeColors = createTheme({
 		background: {
 			default: darkBrands.brandGrey.variant1,
 			paper: brands.brandGrey.variant6,
-			floating: alpha(brands.brandBlack.variant1, 0.95),
+			floating: brands.brandGrey.variant2,
 			white: brands.brandWhite.variant1,
 			beige: brands.brandBeige.variant05,
 			green: brands.brandGreen.variant05,
@@ -63,7 +63,7 @@ const themeColors = createTheme({
 		},
 		primary: {
 			main: brands.brandGreen.variant2,
-			contrastText: brands.brandBlack.variant1,
+			contrastText: brands.brandWhite.variant1,
 			dark: brands.brandGreen.variant4,
 			background: brands.brandGreen.variant2,
 		},
@@ -80,28 +80,28 @@ const themeColors = createTheme({
 			background: alpha(brands.brandGreen.variant2, 0.2),
 		},
 		error: {
-			main: warnings.error.accent,
+			main: warnings.error.content,
 			accent: warnings.error.accent,
-			background: alpha(warnings.error.accent, 0.2),
+			background: warnings.error.background,
 		},
 		warning: {
-			main: warnings.warning.accent,
+			main: warnings.warning.content,
 			accent: warnings.warning.accent,
-			background: alpha(warnings.warning.accent, 0.2),
+			background: warnings.warning.background,
 		},
 		info: {
-			main: warnings.info.accent,
+			main: warnings.info.content,
 			accent: warnings.info.accent,
-			background: alpha(warnings.info.accent, 0.2),
+			background: warnings.info.background,
 		},
 		news: {
-			main: warnings.news.accent,
+			main: warnings.news.content,
 			accent: warnings.news.accent,
-			background: alpha(warnings.news.accent, 0.2),
+			background: warnings.news.background,
 		},
 		neutral: {
-			main: brands.brandGrey.variant2,
-			background: brands.brandGrey.variant5,
+			main: warnings.neutral.content,
+			background: warnings.neutral.background,
 		},
 		disabled: {
 			main: brands.brandGrey.variant4,
@@ -131,11 +131,11 @@ const themeColors = createTheme({
  * Note: Components are defined in themeCombined.tsx to support CSS variables
  */
 
-const themeDark = createTheme(
+const dark = createTheme(
 	themeColors,
 	themeShadows,
 	coreNbNo,
 )
 
-export default themeDark
+export default dark
 export const darkCustomShadows = themeShadows.customShadows

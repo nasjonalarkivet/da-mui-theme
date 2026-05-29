@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 import { nbNO as coreNbNo } from '@mui/material/locale';
-import themeLight from './light';
-import themeDark from './dark';
+import light from './light';
+import dark from './dark';
 import { createComponents } from './components';
 import { themeTypographyExtended, themeShape, themeShadows, themeBorderRadius } from './shared';
 
@@ -12,10 +12,10 @@ const baseTheme = createTheme({
 	},
 	colorSchemes: {
 		light: {
-			palette: themeLight.palette,
+			palette: light.palette,
 		},
 		dark: {
-			palette: themeDark.palette,
+			palette: dark.palette,
 		}
 	},
 	typography: themeTypographyExtended,

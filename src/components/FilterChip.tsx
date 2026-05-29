@@ -1,16 +1,15 @@
-import { filterChipStyles } from "@digitalarkivet/mui-theme/light"
+import { useState } from "react"
 import { CheckOutlined } from "@mui/icons-material"
 import { Box, Chip, ChipProps } from "@mui/material"
 import { styled } from "@mui/material/styles"
-import { CheckOutlined } from "@mui/icons-material"
 import { createFilterChipStyles } from "../components"
 
 const StyledChip = styled(Chip)<ChipProps>(({ theme, selected }) => ({
 	...createFilterChipStyles(),
 	...(selected && {
-		color: theme.palette.text.primaryInvert,
-		backgroundColor: theme.palette.secondary.main,
-		borderColor: theme.palette.secondary.main,
+		color: 'var(--mui-palette-text-primaryInvert)',
+		backgroundColor: 'var(--mui-palette-secondary-main)',
+		borderColor: 'var(--mui-palette-secondary-main)',
 	}),
 }))
 

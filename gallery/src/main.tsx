@@ -1,4 +1,3 @@
-import theme from "@digitalarkivet/mui-theme/light"
 import { CssBaseline, ThemeProvider } from "@mui/material"
 import { createRoot } from "react-dom/client"
 import { Gallery } from "./components/Gallery"

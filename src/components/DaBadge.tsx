@@ -27,8 +27,8 @@ const DaBadgeRoot = styled("div", {
 	borderRadius: theme.shape.borderRadius,
 	fontSize: theme.typography.caption.fontSize,
 	fontWeight: theme.typography.fontWeightMedium,
-	color: theme.palette[ownerState.color].main,
-	backgroundColor: theme.palette[ownerState.color].background,
+	color: `var(--mui-palette-${ownerState.color}-main)`,
+	backgroundColor: `var(--mui-palette-${ownerState.color}-background)`,
 	"& .DaBadge-icon": {
 		marginRight: theme.spacing(1),
 		display: "flex",

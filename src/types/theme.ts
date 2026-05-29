@@ -75,6 +75,10 @@ declare module "@mui/material/styles" {
 		primaryInvert: string
 	}
 
+	interface TypeAction {
+		chipBackground: string
+	}
+
 	interface TypeBackground {
 		white: string
 		green: string

@@ -131,11 +131,11 @@ const themeColors = createTheme({
  * Note: Components are defined in themeCombined.tsx to support CSS variables
  */
 
-const themeLight = createTheme(
+const light = createTheme(
 	themeColors,
 	themeShadows,
 	coreNbNo,
 )
 
-export default themeLight
+export default light
 export const lightCustomShadows = themeShadows.customShadows
