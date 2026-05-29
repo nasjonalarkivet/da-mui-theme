@@ -1,6 +1,6 @@
 import { Components, Theme } from "@mui/material/styles"
 import type { } from "@mui/x-date-pickers/themeAugmentation"
-import type { } from "./types/theme"
+import type { } from "../types/theme"
 import {
 	alertClasses,
 	alertTitleClasses,
@@ -18,15 +18,15 @@ import {
 	tabClasses,
 	tabsClasses,
 } from "@mui/material"
-import ExpandIcon from "./icons/ExpandIcon"
-import CheckBoxChecked from "./icons/CheckBoxChecked"
-import CheckBoxIndeterminate from "./icons/CheckBoxIndeterminate"
-import CalendarMonthIcon from "./icons/CalendarMonthIcon"
+import ExpandIcon from "../icons/ExpandIcon"
+import CheckBoxChecked from "../icons/CheckBoxChecked"
+import CheckBoxIndeterminate from "../icons/CheckBoxIndeterminate"
+import CalendarMonthIcon from "../icons/CalendarMonthIcon"
 import { Dayjs } from "dayjs"
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
-import RadioCheckedIcon from "./icons/RadioChecked"
-import RadioUncheckedIcon from "./icons/RadioUnchecked"
-import CheckBoxBlank from "./icons/CheckBoxBlank"
+import RadioCheckedIcon from "../icons/RadioChecked"
+import RadioUncheckedIcon from "../icons/RadioUnchecked"
+import CheckBoxBlank from "../icons/CheckBoxBlank"
 import { themeTypography, themeBorderRadius } from "./shared"
 
 interface ComponentsConfig {

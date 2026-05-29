@@ -2,7 +2,7 @@ import { useState } from "react"
 import { CheckOutlined } from "@mui/icons-material"
 import { Box, Chip, ChipProps } from "@mui/material"
 import { styled } from "@mui/material/styles"
-import { createFilterChipStyles } from "../components"
+import { createFilterChipStyles } from "../config/componentOverrides"
 
 const StyledChip = styled(Chip)<ChipProps>(({ theme, selected }) => ({
 	...createFilterChipStyles(),

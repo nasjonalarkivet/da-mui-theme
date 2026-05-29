@@ -1,9 +1,9 @@
 import { createTheme } from '@mui/material/styles';
 import { nbNO as coreNbNo } from '@mui/material/locale';
-import light from './light';
-import dark from './dark';
-import { createComponents } from './components';
-import { themeTypographyExtended, themeShape, themeShadows, themeBorderRadius } from './shared';
+import light from '../palettes/light';
+import dark from '../palettes/dark';
+import { createComponents } from '../config/componentOverrides';
+import { themeTypographyExtended, themeShape, themeShadows, themeBorderRadius } from '../config/shared';
 
 const baseTheme = createTheme({
 	cssVariables: {
