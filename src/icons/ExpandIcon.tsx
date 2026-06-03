@@ -1,5 +1,6 @@
-import { Box } from "@mui/material"
-import { AddOutlined as AddIcon, RemoveOutlined as RemoveIcon } from "@mui/icons-material"
+import AddIcon from "@mui/icons-material/AddOutlined"
+import RemoveIcon from "@mui/icons-material/RemoveOutlined"
+import Box from "@mui/material/Box"
 
 const ExpandIcon: React.FC = () => {
 	return (

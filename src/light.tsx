@@ -1,21 +1,19 @@
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
-import {
-	alertClasses,
-	alertTitleClasses,
-	autocompleteClasses,
-	buttonBaseClasses,
-	checkboxClasses,
-	chipClasses,
-	inputBaseClasses,
-	inputLabelClasses,
-	menuItemClasses,
-	outlinedInputClasses,
-	radioClasses,
-	svgIconClasses,
-	switchClasses,
-	tabClasses,
-	tabsClasses,
-} from "@mui/material"
+import alertClasses from "@mui/material/Alert/alertClasses"
+import alertTitleClasses from "@mui/material/AlertTitle/alertTitleClasses"
+import autocompleteClasses from "@mui/material/Autocomplete/autocompleteClasses"
+import buttonBaseClasses from "@mui/material/ButtonBase/buttonBaseClasses"
+import checkboxClasses from "@mui/material/Checkbox/checkboxClasses"
+import chipClasses from "@mui/material/Chip/chipClasses"
+import inputBaseClasses from "@mui/material/InputBase/inputBaseClasses"
+import inputLabelClasses from "@mui/material/InputLabel/inputLabelClasses"
+import menuItemClasses from "@mui/material/MenuItem/menuItemClasses"
+import outlinedInputClasses from "@mui/material/OutlinedInput/outlinedInputClasses"
+import radioClasses from "@mui/material/Radio/radioClasses"
+import svgIconClasses from "@mui/material/SvgIcon/svgIconClasses"
+import switchClasses from "@mui/material/Switch/switchClasses"
+import tabClasses from "@mui/material/Tab/tabClasses"
+import tabsClasses from "@mui/material/Tabs/tabsClasses"
 import { nbNO as coreNbNo } from "@mui/material/locale"
 import { alpha, createTheme } from "@mui/material/styles"
 import type {} from "@mui/x-date-pickers/themeAugmentation"
