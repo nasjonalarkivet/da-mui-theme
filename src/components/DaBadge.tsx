@@ -1,4 +1,6 @@
-import { Box, styled, Typography, useThemeProps } from "@mui/material"
+import Box from "@mui/material/Box"
+import Typography from "@mui/material/Typography"
+import { styled, useThemeProps } from "@mui/material/styles"
 import { forwardRef } from "react"
 
 type DaBadgeColorType = "error" | "warning" | "info" | "success" | "news" | "neutral"

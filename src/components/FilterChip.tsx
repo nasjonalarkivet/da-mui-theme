@@ -1,6 +1,7 @@
 import { filterChipStyles } from "@digitalarkivet/mui-theme/light"
-import { CheckOutlined } from "@mui/icons-material"
-import { Box, Chip, ChipProps } from "@mui/material"
+import CheckOutlined from "@mui/icons-material/CheckOutlined"
+import Box from "@mui/material/Box"
+import Chip, { ChipProps } from "@mui/material/Chip"
 import { styled } from "@mui/material/styles"
 import React, { useState } from "react"
 

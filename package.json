@@ -23,6 +23,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.dist.json",
+    "prepare": "pnpm build",
     "gallery": "pnpm webpack serve",
     "clean": "rm -r dist/*",
     "ci": "pnpm install --frozen-lockfile",

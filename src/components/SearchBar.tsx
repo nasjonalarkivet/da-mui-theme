@@ -1,8 +1,14 @@
 import React, { useState } from "react"
+import CameraIcon from "@mui/icons-material/CameraAltOutlined"
+import ClearIcon from "@mui/icons-material/CloseOutlined"
+import SearchIcon from "@mui/icons-material/SearchOutlined"
+import Box from "@mui/material/Box"
+import IconButton from "@mui/material/IconButton"
+import InputAdornment from "@mui/material/InputAdornment"
+import { outlinedInputClasses } from "@mui/material/OutlinedInput"
 import TextField, { TextFieldProps } from "@mui/material/TextField"
+import Tooltip from "@mui/material/Tooltip"
 import { styled } from "@mui/material/styles"
-import { Box, IconButton, InputAdornment, outlinedInputClasses, Tooltip } from "@mui/material"
-import { SearchOutlined as SearchIcon, CameraAltOutlined as CameraIcon, CloseOutlined as ClearIcon } from "@mui/icons-material"
 
 const DEFAULT_PHOTO_SEARCH_TITLE = "Søk med bilde"
 
