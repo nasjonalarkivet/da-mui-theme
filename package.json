@@ -4,9 +4,28 @@
   "description": "MUI themes for Digitalarkivet applications",
   "private": false,
   "author": "Nasjonalarkivet",
+  "main": "./dist/main.js",
+  "module": "./dist/esm/main.js",
+  "types": "./dist/main.d.ts",
   "exports": {
-    ".": "./dist/main.js",
-    "./components/*": "./dist/components/*.js"
+    ".": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/esm/main.js",
+      "require": "./dist/main.js",
+      "default": "./dist/esm/main.js"
+    },
+    "./light": {
+      "types": "./dist/light.d.ts",
+      "import": "./dist/esm/light.js",
+      "require": "./dist/light.js",
+      "default": "./dist/esm/light.js"
+    },
+    "./components/*": {
+      "types": "./dist/components/*.d.ts",
+      "import": "./dist/esm/components/*.js",
+      "require": "./dist/components/*.js",
+      "default": "./dist/esm/components/*.js"
+    }
   },
   "license": "MIT",
   "homepage": "https://digitalarkivet.no",
@@ -22,7 +41,7 @@
     "url": "https://github.com/nasjonalarkivet/da-mui-theme/issues"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.dist.json",
+    "build": "tsc -p tsconfig.dist.json && tsc -p tsconfig.esm.json && node scripts/write-esm-package-json.mjs",
     "prepare": "pnpm build",
     "gallery": "pnpm webpack serve",
     "clean": "rm -r dist/*",
