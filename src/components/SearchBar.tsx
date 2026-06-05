@@ -22,7 +22,7 @@ const StyledSearchBar = styled(TextField)<SearchBarProps>(({ theme }) => ({
 	[`& .${outlinedInputClasses.root}`]: {
 		borderRadius: "625rem",
 		[`& .${outlinedInputClasses.disabled}`]: {
-			backgroundColor: theme.palette.borders.disabled,
+			backgroundColor: 'var(--mui-palette-borders-disabled)',
 		},
 	},
 }))

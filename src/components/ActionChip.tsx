@@ -7,7 +7,6 @@ import Menu, { MenuProps } from "@mui/material/Menu"
 import MenuItem from "@mui/material/MenuItem"
 import { styled } from "@mui/material/styles"
 import * as React from "react"
-import theme from "@digitalarkivet/mui-theme/light"
 
 const StyledButton = styled(Button)(({ theme }) => ({
 	borderRadius: theme.customShape.borderRadiusFull,
@@ -48,7 +47,7 @@ const StyledMenu = styled((props: MenuProps) => (
 		"& .MuiMenuItem-root": {
 			"& .MuiSvgIcon-root": {
 				fontSize: 18,
-				color: theme.palette.text.secondary,
+				color: 'var(--mui-palette-text-secondary)',
 				marginRight: theme.spacing(1.5),
 			},
 		},
@@ -141,22 +140,20 @@ export default function ActionChip({
 						<MenuItem
 							key={key}
 							onClick={() => handleSelect(key)}
-							sx={theme => ({
-								backgroundColor: isSelected ? theme.palette.fills.secondary : undefined,
-								color: isSelected ? theme.palette.text.primaryInvert : theme.palette.text.primary,
+							sx={{
+								backgroundColor: isSelected ? 'var(--mui-palette-secondary-main)' : undefined,
+								color: isSelected ? 'var(--mui-palette-secondary-contrastText)' : 'var(--mui-palette-text-primary)',
 								display: "flex",
 								alignItems: "center",
 								justifyContent: "space-between",
 								"&:hover": {
-									backgroundColor: isSelected ? theme.palette.fills.secondary : theme.palette.action.hover,
-									color: theme.palette.text.primary,
+									backgroundColor: isSelected ? 'var(--mui-palette-fills-secondary)' : 'var(--mui-palette-action-hover)',
+									color: 'var(--mui-palette-text-primary)',
 								},
-							})}
+							}}
 						>
 							<Box>{label}</Box>
-							{isSelected && (
-								<CheckOutlined style={{ color: theme.palette.text.primaryInvert }} fontSize="small" />
-							)}
+							{isSelected && <CheckOutlined sx={{ color: 'var(--mui-palette-text-primaryInvert)' }} fontSize="small" />}
 						</MenuItem>
 					)
 				})}

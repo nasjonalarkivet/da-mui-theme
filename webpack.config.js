@@ -38,6 +38,9 @@ module.exports = {
 	},
 	resolve: {
 		extensions: [".tsx", ".ts", ".js"],
+		extensionAlias: {
+			".js": [".tsx", ".ts", ".js"],
+		},
 		alias: {
 			"@digitalarkivet/mui-theme": path.resolve(__dirname, "src"),
 		},

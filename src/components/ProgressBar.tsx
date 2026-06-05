@@ -18,7 +18,7 @@ const ProgressBarTrack = styled(Box)(({ theme }) => ({
 	position: "relative",
 	height: 8,
 	width: "100%",
-	backgroundColor: theme.palette.borders.line,
+	backgroundColor: 'var(--mui-palette-borders-line)',
 	borderRadius: theme.shape.borderRadius,
 	overflow: "hidden",
 }))
@@ -29,14 +29,14 @@ const ProgressBarFill = styled(Box)<ProgressBarFillProps>(({ theme, progress }) 
 	left: 0,
 	height: "100%",
 	width: `${progress}%`,
-	backgroundColor: theme.palette.fills.secondary,
+	backgroundColor: 'var(--mui-palette-fills-secondary)',
 	transition: "width 0.3s ease",
 }))
 
 const ProgressBarLabel = styled(Box)(({ theme }) => ({
 	marginRight: theme.spacing(1.5),
-	backgroundColor: theme.palette.background.floating,
-	color: theme.palette.text.primaryInvert,
+	backgroundColor: 'var(--mui-palette-background-floating)',
+	color: 'var(--mui-palette-text-primaryInvert)',
 	padding: theme.spacing(0.5, 1),
 	borderRadius: theme.shape.borderRadius,
 }))

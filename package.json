@@ -1,6 +1,6 @@
 {
   "name": "@digitalarkivet/mui-theme",
-  "version": "4.1.2",
+  "version": "5.0.0",
   "description": "MUI themes for Digitalarkivet applications",
   "private": false,
   "author": "Nasjonalarkivet",
@@ -15,10 +15,22 @@
       "default": "./dist/esm/main.js"
     },
     "./light": {
-      "types": "./dist/light.d.ts",
-      "import": "./dist/esm/light.js",
-      "require": "./dist/light.js",
-      "default": "./dist/esm/light.js"
+      "types": "./dist/themes/themeLight.d.ts",
+      "import": "./dist/esm/themes/themeLight.js",
+      "require": "./dist/themes/themeLight.js",
+      "default": "./dist/esm/themes/themeLight.js"
+    },
+    "./dark": {
+      "types": "./dist/themes/themeDark.d.ts",
+      "import": "./dist/esm/themes/themeDark.js",
+      "require": "./dist/themes/themeDark.js",
+      "default": "./dist/esm/themes/themeDark.js"
+    },
+    "./combined": {
+      "types": "./dist/themes/themeCombined.d.ts",
+      "import": "./dist/esm/themes/themeCombined.js",
+      "require": "./dist/themes/themeCombined.js",
+      "default": "./dist/esm/themes/themeCombined.js"
     },
     "./components/*": {
       "types": "./dist/components/*.d.ts",
