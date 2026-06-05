@@ -6,11 +6,12 @@
     "strictNullChecks": true,
     "allowSyntheticDefaultImports": true,
     //  End: minimum config
-    "target": "es2020",
     "lib": [
       "es2020",
       "dom"
     ],
+    "module": "commonjs",
+    "target": "es6",
     "declaration": true, // https://www.totaltypescript.com/tsconfig-cheat-sheet#building-for-a-library
     "outDir": "dist",
     "strict": true,
