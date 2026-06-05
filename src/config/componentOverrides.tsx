@@ -1,33 +1,31 @@
 import { Components, Theme } from "@mui/material/styles"
 import type { } from "@mui/x-date-pickers/themeAugmentation"
-import type { } from "../types/theme"
-import {
-	alertClasses,
-	alertTitleClasses,
-	autocompleteClasses,
-	buttonBaseClasses,
-	checkboxClasses,
-	chipClasses,
-	inputBaseClasses,
-	inputLabelClasses,
-	menuItemClasses,
-	outlinedInputClasses,
-	radioClasses,
-	svgIconClasses,
-	switchClasses,
-	tabClasses,
-	tabsClasses,
-} from "@mui/material"
-import ExpandIcon from "../icons/ExpandIcon"
-import CheckBoxChecked from "../icons/CheckBoxChecked"
-import CheckBoxIndeterminate from "../icons/CheckBoxIndeterminate"
-import CalendarMonthIcon from "../icons/CalendarMonthIcon"
+import type { } from "../types/theme.js"
+import { alertClasses } from "@mui/material/Alert"
+import { alertTitleClasses } from "@mui/material/AlertTitle"
+import { autocompleteClasses } from "@mui/material/Autocomplete"
+import { buttonBaseClasses } from "@mui/material/ButtonBase"
+import { checkboxClasses } from "@mui/material/Checkbox"
+import { chipClasses } from "@mui/material/Chip"
+import { inputBaseClasses } from "@mui/material/InputBase"
+import { inputLabelClasses } from "@mui/material/InputLabel"
+import { menuItemClasses } from "@mui/material/MenuItem"
+import { outlinedInputClasses } from "@mui/material/OutlinedInput"
+import { radioClasses } from "@mui/material/Radio"
+import { svgIconClasses } from "@mui/material/SvgIcon"
+import { switchClasses } from "@mui/material/Switch"
+import { tabClasses } from "@mui/material/Tab"
+import { tabsClasses } from "@mui/material/Tabs"
 import { Dayjs } from "dayjs"
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
-import RadioCheckedIcon from "../icons/RadioChecked"
-import RadioUncheckedIcon from "../icons/RadioUnchecked"
-import CheckBoxBlank from "../icons/CheckBoxBlank"
-import { themeTypography, themeBorderRadius } from "./shared"
+import ExpandIcon from "../icons/ExpandIcon.js"
+import CheckBoxChecked from "../icons/CheckBoxChecked.js"
+import CheckBoxIndeterminate from "../icons/CheckBoxIndeterminate.js"
+import CalendarMonthIcon from "../icons/CalendarMonthIcon.js"
+import RadioCheckedIcon from "../icons/RadioChecked.js"
+import RadioUncheckedIcon from "../icons/RadioUnchecked.js"
+import CheckBoxBlank from "../icons/CheckBoxBlank.js"
+import { themeTypography, themeBorderRadius } from "./shared.js"
 
 interface ComponentsConfig {
 	customShadows: {

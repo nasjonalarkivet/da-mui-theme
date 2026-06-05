@@ -1,9 +1,12 @@
-import * as React from "react"
-import { styled } from "@mui/material/styles"
+import CheckOutlined from "@mui/icons-material/CheckOutlined"
+import KeyboardArrowDownOutlined from "@mui/icons-material/KeyboardArrowDownOutlined"
+import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
+import { buttonBaseClasses } from "@mui/material/ButtonBase"
 import Menu, { MenuProps } from "@mui/material/Menu"
-import { Box, buttonBaseClasses, MenuItem } from "@mui/material"
-import { KeyboardArrowDownOutlined, CheckOutlined } from "@mui/icons-material"
+import MenuItem from "@mui/material/MenuItem"
+import { styled } from "@mui/material/styles"
+import * as React from "react"
 
 const StyledButton = styled(Button)(({ theme }) => ({
 	borderRadius: theme.customShape.borderRadiusFull,

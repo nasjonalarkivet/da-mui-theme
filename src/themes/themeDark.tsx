@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 import { nbNO as coreNbNo } from '@mui/material/locale';
-import dark, { darkCustomShadows } from '../palettes/dark';
-import { createComponents } from '../config/componentOverrides';
+import dark, { darkCustomShadows } from '../palettes/dark.js';
+import { createComponents } from '../config/componentOverrides.js';
 
 const themeDark = createTheme({
 	cssVariables: {

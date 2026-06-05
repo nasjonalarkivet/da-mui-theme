@@ -1,12 +1,43 @@
 {
   "name": "@digitalarkivet/mui-theme",
-  "version": "4.0.1",
+  "version": "4.1.2",
   "description": "MUI themes for Digitalarkivet applications",
   "private": false,
   "author": "Nasjonalarkivet",
+  "main": "./dist/main.js",
+  "module": "./dist/esm/main.js",
+  "types": "./dist/main.d.ts",
   "exports": {
-    ".": "./dist/main.js",
-    "./components/*": "./dist/components/*.js"
+    ".": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/esm/main.js",
+      "require": "./dist/main.js",
+      "default": "./dist/esm/main.js"
+    },
+    "./light": {
+      "types": "./dist/themes/themeLight.d.ts",
+      "import": "./dist/esm/themes/themeLight.js",
+      "require": "./dist/themes/themeLight.js",
+      "default": "./dist/esm/themes/themeLight.js"
+    },
+    "./dark": {
+      "types": "./dist/themes/themeDark.d.ts",
+      "import": "./dist/esm/themes/themeDark.js",
+      "require": "./dist/themes/themeDark.js",
+      "default": "./dist/esm/themes/themeDark.js"
+    },
+    "./combined": {
+      "types": "./dist/themes/themeCombined.d.ts",
+      "import": "./dist/esm/themes/themeCombined.js",
+      "require": "./dist/themes/themeCombined.js",
+      "default": "./dist/esm/themes/themeCombined.js"
+    },
+    "./components/*": {
+      "types": "./dist/components/*.d.ts",
+      "import": "./dist/esm/components/*.js",
+      "require": "./dist/components/*.js",
+      "default": "./dist/esm/components/*.js"
+    }
   },
   "license": "MIT",
   "homepage": "https://digitalarkivet.no",
@@ -22,7 +53,8 @@
     "url": "https://github.com/nasjonalarkivet/da-mui-theme/issues"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.dist.json",
+    "build": "tsc -p tsconfig.dist.json && tsc -p tsconfig.esm.json && node scripts/write-esm-package-json.mjs",
+    "prepare": "pnpm build",
     "gallery": "pnpm webpack serve",
     "clean": "rm -r dist/*",
     "ci": "pnpm install --frozen-lockfile",

@@ -1,6 +1,6 @@
 import { alpha, createTheme } from "@mui/material/styles"
 import { nbNO as coreNbNo } from "@mui/material/locale"
-import { themeTypographyExtended, brands, themeBorderRadius, themeShape, themeShadows } from "../config/shared"
+import { themeTypographyExtended, brands, themeBorderRadius, themeShape, themeShadows } from "../config/shared.js"
 
 
 const warnings = {

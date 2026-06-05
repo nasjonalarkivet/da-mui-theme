@@ -1,6 +1,5 @@
-import { SvgIcon, SvgIconProps } from "@mui/material"
 import { OverridableComponent } from "@mui/material/OverridableComponent"
-import { SvgIconTypeMap } from "@mui/material"
+import SvgIcon, { SvgIconProps, SvgIconTypeMap } from "@mui/material/SvgIcon"
 
 const RadioCheckedIcon: OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
 	muiName: string
