@@ -1,17 +1,23 @@
 {
   "compilerOptions": {
+    // https://mui.com/material-ui/guides/typescript/#minimum-configuration
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    //  End: minimum config
     "target": "es2020",
-    "module": "commonjs",
     "lib": [
       "es2020",
       "dom"
     ],
-    "declaration": true,
+    "declaration": true, // https://www.totaltypescript.com/tsconfig-cheat-sheet#building-for-a-library
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "sourceMap": true,
+    "sourceMap": true, // https://www.totaltypescript.com/tsconfig-cheat-sheet#building-for-a-library-in-a-monorepo
+    "resolvePackageJsonExports": false, // Needed for override of MUI theme module declarations with TypeScript 6+.
     "declarationMap": true,
     "rootDir": "src",
     "paths": {
