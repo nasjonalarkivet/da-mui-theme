@@ -115,6 +115,7 @@ const themeColors = createTheme({
 			highlight: brands.brandGreen.variant1,
 			disabled: brands.brandGrey.variant1,
 			inverted: brands.brandWhite.variant1,
+			divider: alpha(brands.brandBlack.variant1, 0.12),
 		},
 		action: {
 			hover: brands.brandGreen.variant05,

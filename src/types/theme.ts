@@ -11,6 +11,7 @@ export type BorderColor = {
 	highlight: string
 	disabled: string
 	inverted: string
+	divider: string
 }
 
 export type FillColor = {
