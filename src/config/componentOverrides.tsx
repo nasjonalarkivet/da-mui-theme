@@ -199,6 +199,10 @@ export const createComponents = ({ customShadows }: ComponentsConfig): Component
 					textTransform: "none",
 					fontSize: themeTypography.typography.fontSize16,
 					lineHeight: themeTypography.typography.lineHeight150,
+					[`&.${buttonBaseClasses.focusVisible}`]: {
+						outline: "2px solid var(--mui-palette-borders-active)",
+						outlineOffset: 2,
+					},
 					[themeArg.breakpoints.down("md")]: {
 						padding: themeArg.spacing(1.5),
 					},
