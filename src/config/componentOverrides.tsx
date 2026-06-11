@@ -514,6 +514,32 @@ export const createComponents = ({ customShadows }: ComponentsConfig): Component
 						borderColor: 'var(--mui-palette-error-accent)',
 					},
 				},
+				notchedOutline: {
+					borderColor: 'var(--mui-palette-borders-default)',
+				},
+			},
+		},
+		MuiPickersOutlinedInput: {
+			styleOverrides: {
+				root: {
+					"&.Mui-error .MuiPickersOutlinedInput-notchedOutline": {
+						borderColor: 'var(--mui-palette-error-accent)',
+					},
+					"&.Mui-disabled": {
+						backgroundColor: 'var(--mui-palette-background-gray)',
+					},
+					"&.Mui-focused": {
+						"& .MuiPickersOutlinedInput-notchedOutline": {
+							borderColor: 'var(--mui-palette-borders-active)',
+						},
+					},
+					"&.Mui-error.Mui-focused .MuiPickersOutlinedInput-notchedOutline": {
+						borderColor: 'var(--mui-palette-error-accent)',
+					},
+				},
+				notchedOutline: {
+					borderColor: 'var(--mui-palette-borders-default)',
+				},
 			},
 		},
 		MuiFilledInput: {
@@ -625,6 +651,13 @@ export const createComponents = ({ customShadows }: ComponentsConfig): Component
 			styleOverrides: {
 				root: {
 					color: 'var(--mui-palette-text-primary)',
+					borderBottom: '1px solid var(--mui-palette-borders-divider)',
+					"&:before": {
+						display: 'none',
+					},
+					"&:last-of-type": {
+						borderBottom: 'none',
+					},
 				},
 			},
 		},
@@ -937,6 +970,13 @@ export const createComponents = ({ customShadows }: ComponentsConfig): Component
 		MuiSelect: {
 			defaultProps: {
 				IconComponent: KeyboardArrowDownIcon,
+			},
+		},
+		MuiDivider: {
+			styleOverrides: {
+				root: {
+					borderColor: 'var(--mui-palette-borders-divider)',
+				},
 			},
 		},
 	}
