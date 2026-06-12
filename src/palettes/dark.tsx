@@ -123,6 +123,11 @@ const themeColors = createTheme({
 			disabledBackground: darkBrands.brandGreen.variant1,
 			chipBackground: brands.brandBlack.variant1,
 		},
+		scrollbar: {
+			thumb: brands.brandGrey.variant4,
+			thumbHover: brands.brandGrey.variant3,
+			track: brands.brandGrey.variant6,
+		},
 	},
 	typography: themeTypographyExtended,
 })

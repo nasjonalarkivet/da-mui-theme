@@ -160,6 +160,26 @@ export const createComponents = ({ customShadows }: ComponentsConfig): Component
 	}
 
 	return {
+		MuiCssBaseline: {
+			styleOverrides: {
+				// Chrome, Safari, Edge scrollbar. Firefox requires separate properties, but has native theme switching.
+				'::-webkit-scrollbar': {
+					width: '0.9rem',
+				},
+				'::-webkit-scrollbar-track': {
+					backgroundColor: 'var(--mui-palette-scrollbar-track)',
+					outline: '1px solid var(--mui-palette-borders-divider)',
+				},
+				'::-webkit-scrollbar-thumb': {
+					backgroundColor: 'var(--mui-palette-scrollbar-thumb)',
+					border: '0.2rem	 solid var(--mui-palette-scrollbar-track)',
+					borderRadius: '0.5rem',
+				},
+				'::-webkit-scrollbar-thumb:hover': {
+					backgroundColor: 'var(--mui-palette-scrollbar-thumbHover)',
+				},
+			},
+		},
 		MuiPaper: {
 			variants: [
 				{
