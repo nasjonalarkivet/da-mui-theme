@@ -21,6 +21,12 @@ export type FillColor = {
 	primaryHover: string
 }
 
+export type ScrollbarColor = {
+	thumb: string
+	thumbHover: string
+	track: string
+}
+
 /**
  * Module augmentations
  */
@@ -62,6 +68,7 @@ declare module "@mui/material/styles" {
 		disabled: PaletteColor
 		borders: BorderColor
 		fills: FillColor
+		scrollbar: ScrollbarColor
 	}
 
 	interface PaletteOptions {
@@ -70,6 +77,7 @@ declare module "@mui/material/styles" {
 		disabled: PaletteColorOptions
 		fills: FillColor
 		borders: BorderColor
+		scrollbar: ScrollbarColor
 	}
 
 	interface TypeText {
