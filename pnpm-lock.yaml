@@ -53,11 +53,7 @@ importers:
         version: 19.2.7(react@19.2.7)
       ts-loader:
         specifier: ^9.5.4
-<<<<<<< Updated upstream
-        version: 9.6.0(typescript@6.0.3)(webpack@5.107.2)
-=======
         version: 9.6.1(typescript@6.0.3)(webpack@5.107.2)
->>>>>>> Stashed changes
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -66,17 +62,10 @@ importers:
         version: 5.107.2(webpack-cli@7.0.3)
       webpack-cli:
         specifier: ^7.0.2
-<<<<<<< Updated upstream
-        version: 7.0.2(webpack-dev-server@5.2.5)(webpack@5.107.2)
-      webpack-dev-server:
-        specifier: ^5.2.2
-        version: 5.2.5(tslib@2.8.1)(webpack-cli@7.0.2)(webpack@5.107.2)
-=======
         version: 7.0.3(webpack-dev-server@5.2.5)(webpack@5.107.2)
       webpack-dev-server:
         specifier: ^5.2.2
         version: 5.2.5(tslib@2.8.1)(webpack-cli@7.0.3)(webpack@5.107.2)
->>>>>>> Stashed changes
 
 packages:
 
@@ -403,14 +392,6 @@ packages:
       '@types/react':
         optional: true
 
-  '@mui/types@9.1.1':
-    resolution: {integrity: sha512-Zjt7u8wNvDg40rPTGoL+TnfkpuSKjwubsNSFRH1KAVZLcaV4I3AFNHIFbvH7p4F3alEibSbdd90xAgn5Rnfndg==}
-    peerDependencies:
-      '@types/react': ^17.0.0 || ^18.0.0 || ^19.0.0
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-
   '@mui/utils@9.0.0':
     resolution: {integrity: sha512-bQcqyg/gjULUqTuyUjSAFr6LQGLvtkNtDbJerAtoUn9kGZ0hg5QJiN1PLHMLbeFpe3te1831uq7GFl2ITokGdg==}
     engines: {node: '>=14.0.0'}
@@ -441,13 +422,8 @@ packages:
       '@types/react':
         optional: true
 
-<<<<<<< Updated upstream
-  '@mui/x-date-pickers@9.3.0':
-    resolution: {integrity: sha512-Kg9mEZA+nHKi55DsbzVVMUhURQU6MQXtAEKjgyMqyaq1PMZ8Nr72KszqGhZZNmVkyM91wcq/icYgRVzYa65Gow==}
-=======
   '@mui/x-date-pickers@9.5.0':
     resolution: {integrity: sha512-Pzd8gU2qOoIAUMMesjbrq3gFs6akWXcSsEkFIHVA4dtuoh6SeWISu+WR+ymq/sBOcn2tk9IBIjqRQkqLhkm+tg==}
->>>>>>> Stashed changes
     engines: {node: '>=14.0.0'}
     peerDependencies:
       '@emotion/react': ^11.9.0
@@ -1048,10 +1024,6 @@ packages:
     resolution: {integrity: sha512-SkE2t82KlkkxQRVMVLAGKxLfORGQfrkx5dkj+vlgXRVNEdPc4eZcR+J/Fvj8C+yKSFH5L0q3NFlyufOVQnCcYQ==}
     engines: {node: '>=10.13.0'}
 
-  enhanced-resolve@5.22.1:
-    resolution: {integrity: sha512-6QEuw3zoX1SJQc7b87aBXke/no+mG2bTBgw29gWMQonLmpEkWoCAVkl+M49e48AZlWzxiDzDZzYdp6kobcyLww==}
-    engines: {node: '>=10.13.0'}
-
   entities@2.2.0:
     resolution: {integrity: sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==}
 
@@ -1237,10 +1209,6 @@ packages:
     resolution: {integrity: sha512-T2UbfbBEF32wiepXIsMlTW9+dDYC6wMh/t/vYA4tuOMKqWz/n3vr1NFSxQiyP+zk2mXsoMA/i/7qV6LKut1t1A==}
     engines: {node: '>= 0.4'}
 
-  hasown@2.0.4:
-    resolution: {integrity: sha512-T2UbfbBEF32wiepXIsMlTW9+dDYC6wMh/t/vYA4tuOMKqWz/n3vr1NFSxQiyP+zk2mXsoMA/i/7qV6LKut1t1A==}
-    engines: {node: '>= 0.4'}
-
   he@1.2.0:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
@@ -1288,8 +1256,8 @@ packages:
   http-parser-js@0.5.10:
     resolution: {integrity: sha512-Pysuw9XpUq5dVc/2SMHpuTY01RFl8fttgcyunjL7eEMhGM3cI4eOmiCycJDVCo/7O7ClfQD3SaI6ftDzqOXYMA==}
 
-  http-proxy-middleware@2.0.10:
-    resolution: {integrity: sha512-RKzRWNPxUZqbuk3BC5mGVJbBnWgr+diEnjJexIOytFbBzDy88Fbh/YvBr3DsNrl1jYAfjWfpATEv0NO35FDuPQ==}
+  http-proxy-middleware@2.0.9:
+    resolution: {integrity: sha512-c1IyJYLYppU574+YI7R4QyX2ystMtVXZwIdzazUIPIJsHuWNd+mho2j+bKoHftndicGj9yh+xjd+l0yj7VeT1Q==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       '@types/express': ^4.17.13
@@ -1681,9 +1649,6 @@ packages:
   react-is@19.2.7:
     resolution: {integrity: sha512-kZFnouyVv7eP/Phmrlo9FK+zcAdriZJvzxXHF1Sl1P377WSGe2G/JxVolhTrB/jeV47lKImhNUsijjHAAbcl/A==}
 
-  react-is@19.2.7:
-    resolution: {integrity: sha512-kZFnouyVv7eP/Phmrlo9FK+zcAdriZJvzxXHF1Sl1P377WSGe2G/JxVolhTrB/jeV47lKImhNUsijjHAAbcl/A==}
-
   react-refresh@0.18.0:
     resolution: {integrity: sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==}
     engines: {node: '>=0.10.0'}
@@ -1977,13 +1942,8 @@ packages:
     peerDependencies:
       tslib: '2'
 
-<<<<<<< Updated upstream
-  ts-loader@9.6.0:
-    resolution: {integrity: sha512-dsJO0S+T7grTDWTc4a0nTygXGjKncVUpx8Y+af8EvI/D5WgTJby5UEk5eoMCB9EcLQmnvitqh99MqtjtHgAwFQ==}
-=======
   ts-loader@9.6.1:
     resolution: {integrity: sha512-8FMHnmxtpncUAu0ZjkqpXnOTlwc9eY95esH8WVN94guTPPdkg2ofVdiVM5j8L2lmjiGerXd56zXb/D2JyVQPLg==}
->>>>>>> Stashed changes
     engines: {node: '>=12.0.0'}
     peerDependencies:
       loader-utils: '*'
@@ -2475,27 +2435,16 @@ snapshots:
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7)
       '@types/react': 19.2.17
 
-<<<<<<< Updated upstream
-  '@mui/private-theming@9.1.1(@types/react@19.2.15)(react@19.2.6)':
-    dependencies:
-      '@babel/runtime': 7.29.7
-      '@mui/utils': 9.1.1(@types/react@19.2.15)(react@19.2.6)
-=======
   '@mui/private-theming@9.1.1(@types/react@19.2.17)(react@19.2.7)':
     dependencies:
       '@babel/runtime': 7.29.7
       '@mui/utils': 9.1.1(@types/react@19.2.17)(react@19.2.7)
->>>>>>> Stashed changes
       prop-types: 15.8.1
       react: 19.2.7
     optionalDependencies:
       '@types/react': 19.2.17
 
-<<<<<<< Updated upstream
-  '@mui/styled-engine@9.1.1(@emotion/react@11.14.0(@types/react@19.2.15)(react@19.2.6))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.15)(react@19.2.6))(@types/react@19.2.15)(react@19.2.6))(react@19.2.6)':
-=======
   '@mui/styled-engine@9.1.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(react@19.2.7)':
->>>>>>> Stashed changes
     dependencies:
       '@babel/runtime': 7.29.7
       '@emotion/cache': 11.14.0
@@ -2511,17 +2460,10 @@ snapshots:
   '@mui/system@9.1.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7)':
     dependencies:
       '@babel/runtime': 7.29.7
-<<<<<<< Updated upstream
-      '@mui/private-theming': 9.1.1(@types/react@19.2.15)(react@19.2.6)
-      '@mui/styled-engine': 9.1.1(@emotion/react@11.14.0(@types/react@19.2.15)(react@19.2.6))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.15)(react@19.2.6))(@types/react@19.2.15)(react@19.2.6))(react@19.2.6)
-      '@mui/types': 9.1.1(@types/react@19.2.15)
-      '@mui/utils': 9.1.1(@types/react@19.2.15)(react@19.2.6)
-=======
       '@mui/private-theming': 9.1.1(@types/react@19.2.17)(react@19.2.7)
       '@mui/styled-engine': 9.1.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(react@19.2.7)
       '@mui/types': 9.1.1(@types/react@19.2.17)
       '@mui/utils': 9.1.1(@types/react@19.2.17)(react@19.2.7)
->>>>>>> Stashed changes
       clsx: 2.1.1
       csstype: 3.2.3
       prop-types: 15.8.1
@@ -2537,17 +2479,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.2.17
 
-<<<<<<< Updated upstream
-  '@mui/types@9.1.1(@types/react@19.2.15)':
-    dependencies:
-      '@babel/runtime': 7.29.7
-    optionalDependencies:
-      '@types/react': 19.2.15
-
-  '@mui/utils@9.0.0(@types/react@19.2.15)(react@19.2.6)':
-=======
   '@mui/utils@9.0.0(@types/react@19.2.17)(react@19.2.7)':
->>>>>>> Stashed changes
     dependencies:
       '@babel/runtime': 7.29.7
       '@mui/types': 9.1.1(@types/react@19.2.17)
@@ -2571,23 +2503,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.2.17
 
-<<<<<<< Updated upstream
-  '@mui/utils@9.1.1(@types/react@19.2.15)(react@19.2.6)':
-    dependencies:
-      '@babel/runtime': 7.29.7
-      '@mui/types': 9.1.1(@types/react@19.2.15)
-      '@types/prop-types': 15.7.15
-      clsx: 2.1.1
-      prop-types: 15.8.1
-      react: 19.2.6
-      react-is: 19.2.7
-    optionalDependencies:
-      '@types/react': 19.2.15
-
-  '@mui/x-date-pickers@9.3.0(@emotion/react@11.14.0(@types/react@19.2.15)(react@19.2.6))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.15)(react@19.2.6))(@types/react@19.2.15)(react@19.2.6))(@mui/material@9.0.1(@emotion/react@11.14.0(@types/react@19.2.15)(react@19.2.6))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.15)(react@19.2.6))(@types/react@19.2.15)(react@19.2.6))(@types/react@19.2.15)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(@mui/system@9.0.1(@emotion/react@11.14.0(@types/react@19.2.15)(react@19.2.6))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.15)(react@19.2.6))(@types/react@19.2.15)(react@19.2.6))(@types/react@19.2.15)(react@19.2.6))(@types/react@19.2.15)(dayjs@1.11.21)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
-=======
   '@mui/utils@9.1.1(@types/react@19.2.17)(react@19.2.7)':
->>>>>>> Stashed changes
     dependencies:
       '@babel/runtime': 7.29.7
       '@mui/types': 9.1.1(@types/react@19.2.17)
@@ -2736,11 +2652,7 @@ snapshots:
       source-map: 0.7.6
       webpack: 5.107.2(webpack-cli@7.0.3)
     optionalDependencies:
-<<<<<<< Updated upstream
-      webpack-dev-server: 5.2.5(tslib@2.8.1)(webpack-cli@7.0.2)(webpack@5.107.2)
-=======
       webpack-dev-server: 5.2.5(tslib@2.8.1)(webpack-cli@7.0.3)(webpack@5.107.2)
->>>>>>> Stashed changes
 
   '@popperjs/core@2.11.8': {}
 
@@ -3272,11 +3184,6 @@ snapshots:
       graceful-fs: 4.2.11
       tapable: 2.3.3
 
-  enhanced-resolve@5.22.1:
-    dependencies:
-      graceful-fs: 4.2.11
-      tapable: 2.3.3
-
   entities@2.2.0: {}
 
   envinfo@7.21.0: {}
@@ -3473,10 +3380,6 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hasown@2.0.4:
-    dependencies:
-      function-bind: 1.1.2
-
   he@1.2.0: {}
 
   hoist-non-react-statics@3.3.2:
@@ -3539,7 +3442,7 @@ snapshots:
 
   http-parser-js@0.5.10: {}
 
-  http-proxy-middleware@2.0.10(@types/express@4.17.25):
+  http-proxy-middleware@2.0.9(@types/express@4.17.25):
     dependencies:
       '@types/http-proxy': 1.17.17
       http-proxy: 1.18.1
@@ -3895,8 +3798,6 @@ snapshots:
 
   react-is@19.2.7: {}
 
-  react-is@19.2.7: {}
-
   react-refresh@0.18.0: {}
 
   react-transition-group@4.4.5(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
@@ -4185,17 +4086,10 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-<<<<<<< Updated upstream
-  ts-loader@9.6.0(typescript@6.0.3)(webpack@5.107.2):
-    dependencies:
-      chalk: 4.1.2
-      enhanced-resolve: 5.22.1
-=======
   ts-loader@9.6.1(typescript@6.0.3)(webpack@5.107.2):
     dependencies:
       chalk: 4.1.2
       enhanced-resolve: 5.24.0
->>>>>>> Stashed changes
       micromatch: 4.0.8
       semver: 7.8.4
       source-map: 0.7.6
@@ -4255,11 +4149,7 @@ snapshots:
     dependencies:
       minimalistic-assert: 1.0.1
 
-<<<<<<< Updated upstream
-  webpack-cli@7.0.2(webpack-dev-server@5.2.5)(webpack@5.107.2):
-=======
   webpack-cli@7.0.3(webpack-dev-server@5.2.5)(webpack@5.107.2):
->>>>>>> Stashed changes
     dependencies:
       '@discoveryjs/json-ext': 1.1.0
       commander: 14.0.3
@@ -4271,11 +4161,7 @@ snapshots:
       webpack: 5.107.2(webpack-cli@7.0.3)
       webpack-merge: 6.0.1
     optionalDependencies:
-<<<<<<< Updated upstream
-      webpack-dev-server: 5.2.5(tslib@2.8.1)(webpack-cli@7.0.2)(webpack@5.107.2)
-=======
       webpack-dev-server: 5.2.5(tslib@2.8.1)(webpack-cli@7.0.3)(webpack@5.107.2)
->>>>>>> Stashed changes
 
   webpack-dev-middleware@7.4.5(tslib@2.8.1)(webpack@5.107.2):
     dependencies:
@@ -4290,11 +4176,7 @@ snapshots:
     transitivePeerDependencies:
       - tslib
 
-<<<<<<< Updated upstream
-  webpack-dev-server@5.2.5(tslib@2.8.1)(webpack-cli@7.0.2)(webpack@5.107.2):
-=======
   webpack-dev-server@5.2.5(tslib@2.8.1)(webpack-cli@7.0.3)(webpack@5.107.2):
->>>>>>> Stashed changes
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
@@ -4312,7 +4194,7 @@ snapshots:
       connect-history-api-fallback: 2.0.0
       express: 4.22.2
       graceful-fs: 4.2.11
-      http-proxy-middleware: 2.0.10(@types/express@4.17.25)
+      http-proxy-middleware: 2.0.9(@types/express@4.17.25)
       ipaddr.js: 2.4.0
       launch-editor: 2.14.1
       open: 10.2.0
@@ -4325,13 +4207,8 @@ snapshots:
       webpack-dev-middleware: 7.4.5(tslib@2.8.1)(webpack@5.107.2)
       ws: 8.21.0
     optionalDependencies:
-<<<<<<< Updated upstream
-      webpack: 5.107.2(webpack-cli@7.0.2)
-      webpack-cli: 7.0.2(webpack-dev-server@5.2.5)(webpack@5.107.2)
-=======
       webpack: 5.107.2(webpack-cli@7.0.3)
       webpack-cli: 7.0.3(webpack-dev-server@5.2.5)(webpack@5.107.2)
->>>>>>> Stashed changes
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -4373,11 +4250,7 @@ snapshots:
       watchpack: 2.5.2
       webpack-sources: 3.5.0
     optionalDependencies:
-<<<<<<< Updated upstream
-      webpack-cli: 7.0.2(webpack-dev-server@5.2.5)(webpack@5.107.2)
-=======
       webpack-cli: 7.0.3(webpack-dev-server@5.2.5)(webpack@5.107.2)
->>>>>>> Stashed changes
     transitivePeerDependencies:
       - '@minify-html/node'
       - '@swc/core'
