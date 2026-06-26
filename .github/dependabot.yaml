@@ -1,22 +1,39 @@
 version: 2
+# https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference
 updates:
-
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
     cooldown:
       default-days: 7
-    target-branch: "master"
-    allow:
-      - dependency-name: "*"
+    open-pull-requests-limit: 1
+    groups:
+      all-else: # Update all non-majors together.
         update-types:
-          - version-update:semver-major
+          - minor
+          - patch
+        patterns:
+          - "*"
+      # All majors otherwise are opened in separate PRs.
 
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: weekly
+      interval: daily
     cooldown:
       default-days: 7
-    target-branch: "master"
+    versioning-strategy: "increase-if-necessary" # https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#versioning-strategy--
+    open-pull-requests-limit: 1
+    groups:
+      all-else: # Update all non-majors together.
+        update-types:
+          - minor
+          - patch
+        patterns:
+          - "*"
+      # All majors otherwise are opened in separate PRs.
+    ignore:
+      - dependency-name: "@types/node" # Update manually together with .node-version file.
+        update-types:
+          - "version-update:semver-major"
