@@ -8,4 +8,4 @@ permissions:
 
 jobs:
   merge:
-    uses: nasjonalarkivet/actions/.github/workflows/dependabot-approved-automerge.yaml@master
+    uses: nasjonalarkivet/actions/.github/workflows/depbot-auto-merge-on-approval.yaml@master
