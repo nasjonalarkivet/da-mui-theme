@@ -1,0 +1,11 @@
+name: Dependabot auto-merge on approval
+on:
+  pull_request_review:
+    types: [submitted]
+
+permissions:
+  contents: read
+
+jobs:
+  merge:
+    uses: nasjonalarkivet/actions/.github/workflows/depbot-auto-merge-on-approval.yaml@master
