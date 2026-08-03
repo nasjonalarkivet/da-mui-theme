@@ -47,7 +47,7 @@ importers:
         version: 9.1.0(typescript@7.0.2)(webpack@5.109.0)
       html-webpack-plugin:
         specifier: ^5.6.5
-        version: 5.6.7(webpack@5.109.0)
+        version: 5.6.8(webpack@5.109.0)
       react-dom:
         specifier: ^19.2.3
         version: 19.2.8(react@19.2.7)
@@ -1331,11 +1331,11 @@ packages:
     engines: {node: '>=12'}
     hasBin: true
 
-  html-webpack-plugin@5.6.7:
-    resolution: {integrity: sha512-md+vXtdCAe60s1k6AU3dUyMJnDxUyQAwfwPKoLisvgUF1IXjtlLsk2se54+qfL9Mdm26bbwvjJybpNx48NKRLw==}
+  html-webpack-plugin@5.6.8:
+    resolution: {integrity: sha512-MZmKQcTnhEh1SPSyMiEytIeDZDUoBZVorNHivQGXMASHf/BSGGOrKa2xQ5bGx3TCe1n109ecCt+cpww7wwWhKA==}
     engines: {node: '>=10.13.0'}
     peerDependencies:
-      '@rspack/core': 0.x || 1.x
+      '@rspack/core': 0.x || 1.x || 2.x
       webpack: ^5.20.0
     peerDependenciesMeta:
       '@rspack/core':
@@ -2021,11 +2021,6 @@ packages:
   tapable@2.3.3:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
     engines: {node: '>=6'}
-
-  terser@5.48.0:
-    resolution: {integrity: sha512-J/9An6vs9Us6wKRriSFXBWdRZapREHqFzdNUKk0pmu804EMR6dr6winwo7e5JDxN4xahxQsuysyYFwlwj4XN/Q==}
-    engines: {node: '>=10'}
-    hasBin: true
 
   terser@5.49.0:
     resolution: {integrity: sha512-SNiDnXyHSrxVcIOtVbULzcTmniUiwcV7Nwdyj1twVubeTmbjoa8p69KKDpfkdoOavuM4/GRm1+ykI8qqnavHoA==}
@@ -3571,9 +3566,9 @@ snapshots:
       he: 1.2.0
       param-case: 3.0.4
       relateurl: 0.2.7
-      terser: 5.48.0
+      terser: 5.49.0
 
-  html-webpack-plugin@5.6.7(webpack@5.109.0):
+  html-webpack-plugin@5.6.8(webpack@5.109.0):
     dependencies:
       '@types/html-minifier-terser': 6.1.0
       html-minifier-terser: 6.1.0
@@ -4233,13 +4228,6 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   tapable@2.3.3: {}
-
-  terser@5.48.0:
-    dependencies:
-      '@jridgewell/source-map': 0.3.11
-      acorn: 8.17.0
-      commander: 2.20.3
-      source-map-support: 0.5.21
 
   terser@5.49.0:
     dependencies:
