@@ -9,3 +9,4 @@ permissions:
 jobs:
   merge:
     uses: nasjonalarkivet/actions/.github/workflows/depbot-auto-merge-on-approval.yaml@master
+    secrets: inherit
