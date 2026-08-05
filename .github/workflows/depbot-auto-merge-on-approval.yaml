@@ -4,9 +4,9 @@ on:
     types: [submitted]
 
 permissions:
-  contents: read
+  pull-requests: write # To approve.
+  contents: write # To merge.
 
 jobs:
-  merge:
+  workflow:
     uses: nasjonalarkivet/actions/.github/workflows/depbot-auto-merge-on-approval.yaml@master
-    secrets: inherit
