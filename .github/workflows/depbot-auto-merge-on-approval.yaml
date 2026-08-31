@@ -1,12 +1,30 @@
+# NOTE: Cannot reuse workflow from private repos.
+# Copied from `actions` repo. https://github.com/nasjonalarkivet/actions/blob/master/.github/workflows/depbot-auto-merge-on-approval.yaml
 name: Dependabot auto-merge on approval
+
 on:
   pull_request_review:
     types: [submitted]
 
+# Override defaults with least privilege.
 permissions:
   pull-requests: write # To approve.
   contents: write # To merge.
 
+env:
+  # GH_TOKEN is the environment variable recognised by gh cli to approve and merge PRs.
+  GH_TOKEN: ${{ github.token }}
+
 jobs:
   workflow:
-    uses: nasjonalarkivet/actions/.github/workflows/depbot-auto-merge-on-approval.yaml@master
+    name: Auto-merge dependabot on approval
+    runs-on: ubuntu-latest
+    if: |
+      github.event.pull_request.user.login == 'dependabot[bot]' &&
+      github.event.review.state == 'approved'
+    steps:
+      - name: Dependabot metadata
+        uses: dependabot/fetch-metadata@v3
+
+      - name: Merge PR with squash
+        run: gh pr merge --squash --auto "${{github.event.pull_request.html_url}}"

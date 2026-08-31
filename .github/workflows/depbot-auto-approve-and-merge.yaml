@@ -1,0 +1,35 @@
+---
+# NOTE: Cannot reuse workflow from private repos.
+# Copied from `actions` repo. https://github.com/nasjonalarkivet/actions/blob/master/.github/workflows/depbot-auto-approve-and-merge.yaml
+name: Dependabot auto-approve and merge
+
+on:
+  pull_request:
+
+# Override defaults with least privilege.
+permissions:
+  # These apply only to ${{ github.token }}. If gh-token is provided, the permissions of that token apply.
+  pull-requests: write # To approve.
+  contents: write #  To merge.
+
+env:
+  PR_URL: ${{ github.event.pull_request.html_url }}
+  # GH_TOKEN is the environment variable recognised by gh cli to approve and merge PRs.
+  GH_TOKEN: ${{secrets.DEPENDABOT_MERGE_TOKEN}}
+
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v3
+
+      - name: Enable auto-merge for Dependabot PRs
+        if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
+        run: gh pr merge --auto --squash "$PR_URL"
+
+      - name: Approve PR
+        if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
+        run: gh pr review --approve "$PR_URL"
