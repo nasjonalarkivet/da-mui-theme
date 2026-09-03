@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography"
 import { styled, useThemeProps } from "@mui/material/styles"
 import { forwardRef } from "react"
 
-type DaBadgeColorType = "error" | "warning" | "info" | "success" | "news" | "neutral"
+type DaBadgeColorType = "error" | "warning" | "info" | "success" | "news" | "neutral" | "floating"
 
 export interface DaBadgeProps {
 	label: string
@@ -22,30 +22,44 @@ const DaBadgeRoot = styled("div", {
 	name: "DaBadge",
 	slot: "Root",
 	overridesResolver: (props, styles) => styles.root,
-})<{ ownerState: DaBadgeOwnerState }>(({ theme, ownerState }) => ({
-	display: "inline-flex",
-	alignItems: "center",
-	padding: theme.spacing(0.5, 1),
-	borderRadius: theme.shape.borderRadius,
-	fontSize: theme.typography.caption.fontSize,
-	fontWeight: theme.typography.fontWeightMedium,
-	color: `var(--mui-palette-${ownerState.color}-main)`,
-	backgroundColor: `var(--mui-palette-${ownerState.color}-background)`,
-	"& .DaBadge-icon": {
-		marginRight: theme.spacing(1),
-		display: "flex",
+})<{ ownerState: DaBadgeOwnerState }>(({ theme, ownerState }) => {
+	const badgeColors = ownerState.color === "floating"
+		? {
+				color: theme.palette.text.primaryInvert,
+				backgroundColor: theme.palette.background.floating,
+			}
+		: {
+				color: `var(--mui-palette-${ownerState.color}-main)`,
+				backgroundColor: `var(--mui-palette-${ownerState.color}-background)`,
+			}
+
+	return {
+		display: "inline-flex",
 		alignItems: "center",
-		"& svg": {
-			fontSize: theme.typography.caption.fontSize,
+		padding: theme.spacing(0.5, 1),
+		borderRadius: theme.shape.borderRadius,
+		fontSize: theme.typography.caption.fontSize,
+		...badgeColors,
+		"& .DaBadge-icon": {
+			marginRight: theme.spacing(1),
+			display: "flex",
+			alignItems: "center",
+			"& svg": {
+				fontSize: theme.typography.caption.fontSize,
+			},
+			...(ownerState.color === "floating" && {
+				"& svg": {
+					fontSize: theme.typography.fontSize16,
+				},
+			}),
 		},
-	},
-	// Apply conditional styles based on the presence of the icon
-	...(ownerState.hasIcon && {
-		["& .MuiTypography-root"]: {
-			lineHeight: 2,
-		},
-	}),
-}))
+		...(ownerState.hasIcon && ownerState.color !== "floating" && {
+			"& .MuiTypography-root": {
+				lineHeight: 2,
+			},
+		}),
+	}
+})
 
 export const DaBadge = forwardRef<HTMLDivElement, DaBadgeProps>(function DaBadge(inProps, ref) {
 	const props = useThemeProps({ props: inProps, name: "DaBadge" })
