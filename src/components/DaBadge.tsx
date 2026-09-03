@@ -41,16 +41,17 @@ const DaBadgeRoot = styled("div", {
 		fontSize: theme.typography.caption.fontSize,
 		...badgeColors,
 		"& .DaBadge-icon": {
-			width: 16,
-			height: 16,
 			marginRight: theme.spacing(1),
 			display: "flex",
 			alignItems: "center",
 			"& svg": {
-				width: 16,
-				height: 16,
-				fontSize: 16,
+				fontSize: theme.typography.caption.fontSize,
 			},
+			...(ownerState.color === "floating" && {
+				"& svg": {
+					fontSize: theme.typography.fontSize16,
+				},
+			}),
 		},
 		...(ownerState.hasIcon && ownerState.color !== "floating" && {
 			"& .MuiTypography-root": {
