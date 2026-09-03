@@ -18,7 +18,7 @@ env:
 jobs:
   workflow:
     name: Auto-merge dependabot on approval
-    runs-on: ubuntu-latest
+    runs-on: static-runner
     if: |
       github.event.pull_request.user.login == 'dependabot[bot]' &&
       github.event.review.state == 'approved'
