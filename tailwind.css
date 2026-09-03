@@ -53,6 +53,7 @@
 	--brand-beige-05: #FAF9F3;
 	--brand-beige-1: #E5E2D7;
 
+	--brand-black: #0D0D0D;
 	--brand-black-1: #000000;
 
 	--brand-white-1: #FFFFFF;
@@ -134,7 +135,7 @@
 	--color-background-beige: var(--brand-beige-05);
 	--color-background-green: var(--brand-green-05);
 	--color-background-gray: var(--brand-grey-05);
-	--color-background-floating: --alpha(var(--brand-black-1) / 80%);
+	--color-background-floating: --alpha(var(--brand-black) / 80%);
 	--color-background-darkgreen: var(--brand-green-5);
 
 	/* Border colors */

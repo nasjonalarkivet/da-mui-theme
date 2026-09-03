@@ -44,7 +44,7 @@ const themeColors = createTheme({
 			beige: brands.brandBeige.variant05,
 			green: brands.brandGreen.variant05,
 			gray: brands.brandGrey.variant05,
-			floating: alpha(brands.brandBlack.variant1, 0.8),
+			floating: alpha(brands.brandBlack.base, 0.8),
 			darkGreen: brands.brandGreen.variant5,
 			backdrop: alpha(brands.brandGrey.variant1, 0.7),
 			input: brands.brandWhite.variant1,

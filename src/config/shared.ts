@@ -65,6 +65,7 @@ const brands = {
 		variant1: "#E5E2D7",
 	},
 	brandBlack: {
+		base: "#0D0D0D",
 		variant1: "#000000",
 	},
 	brandWhite: {
@@ -204,6 +205,7 @@ const themeTypographyExtended: any = {
 	},
 	labelMono: {
 		fontFamily: fontFamilies.suisseIntlMono,
+		fontWeight: themeTypography.typography.fontWeightRoman,
 		fontSize: themeTypography.typography.fontSize12,
 		lineHeight: themeTypography.typography.lineHeight130,
 	},

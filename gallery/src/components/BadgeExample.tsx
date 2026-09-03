@@ -1,6 +1,6 @@
 import { DaBadge } from "@digitalarkivet/mui-theme/components/DaBadge"
 import { ExampleWrapper } from "./ExampleWrapper"
-import {  Grid } from "@mui/material"
+import { Grid } from "@mui/material"
 import { CardGiftcardOutlined as GiftIcon } from "@mui/icons-material"
 
 export const BadgeExample = () => {
@@ -10,6 +10,8 @@ export const BadgeExample = () => {
 		...colorOptions.map(color => <DaBadge key={color} color={color} label={color} icon={<GiftIcon />} />),
 		<DaBadge key="neutral-1" color="neutral" label="neutral" />,
 		<DaBadge key="neutral-2" color="neutral" label="neutral" icon={<GiftIcon />} />,
+		<DaBadge key="floating-1" color="floating" label="Arkivskaper" />,
+		<DaBadge key="floating-2" color="floating" label="Type" icon={<GiftIcon />} />,
 	]
 
 	return (
