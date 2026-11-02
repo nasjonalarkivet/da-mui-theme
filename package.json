@@ -58,13 +58,12 @@
     "gallery": "pnpm webpack serve",
     "clean": "rm -r dist/*",
     "ci": "pnpm install --frozen-lockfile",
-    "self-up": "corepack use pnpm@latest",
     "outdated": "pnpm -r outdated",
     "up": "pnpm update --no-save # Update without changing package.json",
     "iup": "pnpm upgrade --interactive --latest",
     "rmnm": "rm -rf node_modules && rm -f pnpm-lock.yaml && rm -f package-lock.json",
     "depcheck": "pnpm dlx knip",
-    "check-unmet-deps": "pnpm install --resolution-only"
+    "check-unmet-deps": "pnpm peers check"
   },
   "peerDependencies": {
     "@emotion/react": "^11.14.0",
@@ -95,5 +94,5 @@
     "LICENSE",
     "tailwind.css"
   ],
-  "packageManager": "pnpm@10.33.2+sha512.a90faf6feeab71ad6c6e57f94e0fe1a12f5dcc22cd754db40ae9593eb6a3e0b6b12e3540218bb37ae083404b1f2ce6db2a4121e979829b4aff94b99f49da1cf8"
+  "packageManager": "pnpm@12.15.0"
 }
