@@ -16,6 +16,5 @@ jobs:
           # Reads .node-version and package.json automatically.
           install: true
           require-lockfile: true
-          working-directory: ./frontend
       - run: pnpm run build
       #- run: npm test
