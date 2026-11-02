@@ -58,13 +58,12 @@
     "gallery": "pnpm webpack serve",
     "clean": "rm -r dist/*",
     "ci": "pnpm install --frozen-lockfile",
-    "self-up": "corepack use pnpm@latest",
     "outdated": "pnpm -r outdated",
     "up": "pnpm update --no-save # Update without changing package.json",
     "iup": "pnpm upgrade --interactive --latest",
     "rmnm": "rm -rf node_modules && rm -f pnpm-lock.yaml && rm -f package-lock.json",
     "depcheck": "pnpm dlx knip",
-    "check-unmet-deps": "pnpm install --resolution-only"
+    "check-unmet-deps": "pnpm peers check"
   },
   "peerDependencies": {
     "@emotion/react": "^11.14.0",
