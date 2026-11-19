@@ -1,11 +1,6 @@
 import Alert, { alertClasses, type AlertProps, AlertColor } from "@mui/material/Alert"
 import type { SxProps, Theme } from "@mui/material/styles"
-import {
-	useCallback,
-	useEffect,
-	useMemo,
-	useState,
-} from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 
 export type AppStatusSeverity = "info" | "warning" | "danger"
 
@@ -34,6 +29,7 @@ export type AppStatusApplication =
 	| "mottak"
 	| "bevaring"
 	| "skattogpensjon"
+	| "arkivpakkeutforsker"
 
 export type AppStatusBarOptions = {
 	statusBaseUrl?: string
@@ -44,18 +40,12 @@ export type AppStatusBarOptions = {
 	position?: "sticky" | "static"
 }
 
-export function resolveAppStatusFetchUrl(
-	statusBaseUrl: string,
-	application: AppStatusApplication,
-): string {
+export function resolveAppStatusFetchUrl(statusBaseUrl: string, application: AppStatusApplication): string {
 	const base = statusBaseUrl.replace(/\/+$/, "")
 	return `${base}/${encodeURIComponent(application)}`
 }
 
-function mergeAlertSx(
-	layout: SxProps<Theme>,
-	sx: AlertProps["sx"] | undefined,
-): SxProps<Theme> {
+function mergeAlertSx(layout: SxProps<Theme>, sx: AlertProps["sx"] | undefined): SxProps<Theme> {
 	if (sx === undefined) {
 		return [layout] as SxProps<Theme>
 	}
@@ -70,25 +60,24 @@ export type AppStatusBarProps = {
 	options?: AppStatusBarOptions
 } & Omit<AlertProps, "severity" | "children">
 
-function useAppStatusPolling(
-	fetchUrl: string,
-	pollIntervalMs: number,
-	enabled: boolean,
-) {
+function useAppStatusPolling(fetchUrl: string, pollIntervalMs: number, enabled: boolean) {
 	const [data, setData] = useState<AppStatusPayload | null>(null)
 	const [isPending, setIsPending] = useState(enabled)
 
-	const fetchStatus = useCallback(async (signal: AbortSignal) => {
-		const response = await fetch(fetchUrl, {
-			signal,
-			headers: { Accept: "application/json" },
-			cache: "no-store",
-		})
-		if (!response.ok) {
-			throw new Error(`App status: HTTP ${response.status}`)
-		}
-		return response.json() as Promise<AppStatusPayload>
-	}, [fetchUrl])
+	const fetchStatus = useCallback(
+		async (signal: AbortSignal) => {
+			const response = await fetch(fetchUrl, {
+				signal,
+				headers: { Accept: "application/json" },
+				cache: "no-store",
+			})
+			if (!response.ok) {
+				throw new Error(`App status: HTTP ${response.status}`)
+			}
+			return response.json() as Promise<AppStatusPayload>
+		},
+		[fetchUrl],
+	)
 
 	useEffect(() => {
 		if (!enabled) {
@@ -134,12 +123,7 @@ function useAppStatusPolling(
 	return { data, isPending }
 }
 
-const AppStatusBar = ({
-	application,
-	options,
-	sx,
-	...alertProps
-}: AppStatusBarProps) => {
+const AppStatusBar = ({ application, options, sx, ...alertProps }: AppStatusBarProps) => {
 	const statusBaseUrl = options?.statusBaseUrl ?? DEFAULT_STATUS_BASE_URL
 	const pollIntervalMs = options?.pollIntervalMs ?? DEFAULT_POLL_MS
 	const position = options?.position ?? "sticky"
@@ -147,18 +131,11 @@ const AppStatusBar = ({
 
 	const isStatusControlled = options?.status !== undefined
 
-	const fetchUrl = useMemo(
-		() => resolveAppStatusFetchUrl(statusBaseUrl, application),
-		[application, statusBaseUrl],
-	)
+	const fetchUrl = useMemo(() => resolveAppStatusFetchUrl(statusBaseUrl, application), [application, statusBaseUrl])
 
 	const pollEnabled = !isStatusControlled && options?.enabled !== false
 
-	const { data, isPending } = useAppStatusPolling(
-		fetchUrl,
-		pollIntervalMs,
-		pollEnabled,
-	)
+	const { data, isPending } = useAppStatusPolling(fetchUrl, pollIntervalMs, pollEnabled)
 
 	const status = isStatusControlled ? options?.status : data
 	const showPending = pollEnabled && isPending
@@ -176,7 +153,7 @@ const AppStatusBar = ({
 					position,
 					...(position === "sticky" && {
 						top: stickyTop,
-						zIndex: (theme) => theme.zIndex.appBar,
+						zIndex: theme => theme.zIndex.appBar,
 					}),
 					borderRadius: 0,
 					flexShrink: 0,
